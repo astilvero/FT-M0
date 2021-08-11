@@ -68,7 +68,7 @@ function tieneEmail(usuario) {
   // De lo contratio, devuelve "false"
   // Tu código:
   
-  if(usuario["email"]){
+  if(usuario["email"]){//usuario.email =>tambien funciona
     return true;
   }
   return false;
@@ -85,13 +85,14 @@ function tienePropiedad(objeto, propiedad) {
   }
   return false;
 }
+//return objeto.hasOwnProperty(propiedad) =>el de propiedad termina siendo un string
 
 function verificarPassword(usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(usuario["password"]===password){
+  if(usuario["password"]===password){//usuario.password =>tambien funciona
     return true;
   } return false;
 }
@@ -100,6 +101,7 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
+  console.log("Hola Usuario: ", usuario);
   usuario.password=nuevaPassword;
   return usuario;  
 }
@@ -109,6 +111,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+  
   usuario.amigos.push(nuevoAmigo);
   return usuario;
 }
